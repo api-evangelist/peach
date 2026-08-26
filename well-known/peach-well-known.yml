@@ -1,0 +1,76 @@
+generated: '2026-08-26'
+method: probed
+source: https://www.discoverpeach.com/.well-known/
+note: >-
+  Every /.well-known/ path probed on Peach's only surviving host returned HTTP 404 with the site's
+  standard Rails "The page you were looking for doesn't exist" HTML error body (1,351 bytes,
+  text/html). No document of any kind is served. No WellKnown or SecurityTxt pointer is emitted in
+  apis.yml, because a recorded absence is not a presence. Probed over TLS with certificate
+  verification disabled: the host's Let's Encrypt certificate for discoverpeach.com expired
+  2025-08-03 and has not been renewed, which is itself consistent with the company's published
+  closure notice. Only one host exists — Peach ran no api./docs./developer. subdomain (all four
+  candidates return NXDOMAIN) and shipped no developer program.
+hosts:
+- host: www.discoverpeach.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+contract_discovery:
+  note: >-
+    STEP 0b contract discovery run in full against the only host Peach operates. No REST OpenAPI, no
+    GraphQL surface, no MCP endpoint and no A2A agent card. /robots.txt is the single machine-readable
+    document the site serves, and it describes a Spree-style e-commerce storefront (Disallow /cart,
+    /checkout, /orders, /stylist), not an API.
+  probes:
+  - url: https://www.discoverpeach.com/openapi.json
+    status: 404
+  - url: https://www.discoverpeach.com/openapi.yaml
+    status: 404
+  - url: https://www.discoverpeach.com/swagger.json
+    status: 404
+  - url: https://www.discoverpeach.com/v1/openapi.json
+    status: 404
+  - url: https://www.discoverpeach.com/api-docs
+    status: 404
+  - url: https://www.discoverpeach.com/api
+    status: 404
+  - url: https://www.discoverpeach.com/docs
+    status: 404
+  - url: https://www.discoverpeach.com/graphql
+    status: 404
+  - url: https://www.discoverpeach.com/llms.txt
+    status: 404
+  - url: https://www.discoverpeach.com/sitemap.xml
+    status: 404
+  - url: https://www.discoverpeach.com/robots.txt
+    status: 200
+  - url: https://docs.discoverpeach.com/
+    status: NXDOMAIN
+  - url: https://developer.discoverpeach.com/
+    status: NXDOMAIN
+  - url: https://developers.discoverpeach.com/
+    status: NXDOMAIN
+  - url: https://api.discoverpeach.com/
+    status: NXDOMAIN
