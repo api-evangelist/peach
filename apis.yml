@@ -8,6 +8,17 @@ description: 'Peach (Peach, inc., ticker PEAC on secondary markets) was a Waltha
   a farewell notice ("Peach has closed its doors") and refers customers to Cabi Clothing. Peach was a
   consumer retail brand, not a software vendor — it never operated a developer program, published no
   API documentation, and no machine-readable contract of any kind was found on its surviving surface.'
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://www.discoverpeach.com/assets/favicon-f5817c4c87497f7e49964de306be0d1a88c0c1a396d58bda874a36cfd59d822d.png
 url: https://raw.githubusercontent.com/api-evangelist/peach/refs/heads/main/apis.yml
 x-type: company
