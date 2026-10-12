@@ -1,0 +1,20 @@
+generated: '2026-10-12'
+method: searched
+source:
+- https://n8n.io/integrations/peach/
+checked:
+- https://composio.dev/toolkits/peach
+- https://monid.ai/tools/peach
+- https://n8n.io/integrations/peach/
+- https://zapier.com/apps/peach/integrations
+summary: null
+marketplace_apps:
+- marketplace: n8n
+  channel: open-source-node
+  app: peach
+  url: https://n8n.io/integrations/peach/
+  identity: title
+  pair_pages: 0
+  pairs: []
+edges: []
+templates: []
